@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
   //Sticky en el navbar y static en el PC para que el navbar se mantenga en la parte superior de la pantalla y no se mueva cuando se hace scroll 
-    <nav className="sticky top-0 z-50 bg-white shadow-lg lg:static">
+<nav className="sticky top-0 z-50 bg-[#181818] shadow-lg lg:static">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 relative">
           {/* Logo */}
@@ -32,7 +32,7 @@ export default function Navbar() {
 
           {/* Título centrado en móvil y ubicado normalmente en PC */}
           <div className="flex-1 flex justify-center lg:justify-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-black text-center lg:text-left tracking-wide">
+            <h1 className="text-2xl md:text-3xl font-bold text-white text-center lg:text-left tracking-wide">
               Lucas Moris
             </h1>
           </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
             <button
               onClick={toggleMenu}
               // Original: className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-red-600 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-red-600 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
               aria-expanded="false"
             >
               <span className="sr-only">Abrir menú principal</span>
@@ -70,12 +70,12 @@ export default function Navbar() {
           {/* Menú escritorio - visible solo en PC */}
           <div className="hidden lg:flex items-center space-x-6">
             {/* Original: className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-blue-50 hover:scale-105" */}
-            <a href="#inicio" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Inicio</a>
-            <a href="#cambios-fisicos" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Cambios Físicos</a>
-            <a href="#testimonios" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Comentarios</a>
-            <a href="#acerca" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Acerca de mi</a>
-            <a href="#asesorias" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Asesorias</a>
-            <a href="#contacto" className="text-black hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Contacto</a>
+            <a href="#inicio" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Inicio</a>
+            <a href="#cambios-fisicos" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Cambios Físicos</a>
+            <a href="#testimonios" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Comentarios</a>
+            <a href="#acerca" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Acerca de mi</a>
+            <a href="#asesorias" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Asesorias</a>
+            <a href="#contacto" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Contacto</a>
           </div>
         </div>
       </div>

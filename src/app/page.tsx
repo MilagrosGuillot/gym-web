@@ -13,15 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Título Personal Trainer */}
-      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black border-b border-red-700">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 flex items-center justify-center gap-3">
-            Personal Trainer
-            <Image src="/Verificado.png" alt="Verificado" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 inline-block align-middle" />
-          </h1>
-          <p className="text-red-500 font-bold">+50 mentorías</p>
-        </div>
-      </section>
+     
 
       {/* Video de YouTube con controles clasicos */}
       <section
@@ -44,8 +36,18 @@ export default function Home() {
         </div>
       </section>
 
-
+      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black border-b border-red-700">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 flex items-center justify-center gap-3">
+            Personal Trainer
+            <Image src="/Verificado.png" alt="Verificado" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 inline-block align-middle" />
+          </h1>
+          <p className="text-red-500 font-bold">+50 mentorías</p>
+        </div>
+      </section>
+      
       {/* Botón debajo de la imagen */}
+      {/*
       <section className="py-12 px-4 md:px-8 lg:px-12 bg-black">
         <div className="max-w-7xl mx-auto text-center">
           <a href="#contacto">
@@ -58,7 +60,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-
+*/}
       
        {/* Sección Asesorias */}
        <section id="asesorias" className="py-12 px-4 md:px-8 lg:px-12 bg-">
