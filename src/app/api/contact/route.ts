@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     const data = await resend.emails.send({
       from: 'Consultas Web <noreply@resend.dev>', // -------------> remitente
-      to: 'luquitamoris@gmail.com', // -------------> destinatario
+      to: 'miliguillot12@gmail.com', // -------------> destinatario
       subject: `Nueva consulta de ${name}`,
       replyTo: email,
       html: `<p><b>Nombre:</b> ${name}</p>
