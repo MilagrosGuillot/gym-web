@@ -48,7 +48,7 @@ export default function Form() {
       } else {
         setError('Hubo un error al enviar el mensaje. Intenta nuevamente.');
       }
-    } catch (err) {
+    } catch{
       setError('Hubo un error al enviar el mensaje. Intenta nuevamente.');
     }
   };
