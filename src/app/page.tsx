@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import ImageCarousel from '../components/ImageCarousel';
 import TestimonialCardSlider from '../components/TestimonialCardSlider';
 import Form from '../components/Form';
@@ -36,16 +35,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black border-b border-red-700">
+
+      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black ">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 flex items-center justify-center gap-3">
-            Personal Trainer
-            <Image src="/Verificado.png" alt="Verificado" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 inline-block align-middle" />
-          </h1>
-          <p className="text-red-500 font-bold">+50 mentorías</p>
+        <p className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        En lugar de vivir por causa y efecto, vamos a 
+          <br />
+          <span className="text-red-600">causar un efecto</span>
+    </p>
         </div>
       </section>
-      
+
       {/* Botón debajo de la imagen */}
       {/*
       <section className="py-12 px-4 md:px-8 lg:px-12 bg-black">

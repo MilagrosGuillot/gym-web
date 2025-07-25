@@ -3,6 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['800'], // ExtraBold (podés probar con 700 también)
+});
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,31 +17,29 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
   return (
-  //Sticky en el navbar y static en el PC para que el navbar se mantenga en la parte superior de la pantalla y no se mueva cuando se hace scroll 
-<nav className="sticky top-0 z-50 bg-[#181818] shadow-lg lg:static">
+    //Sticky en el navbar y static en el PC para que el navbar se mantenga en la parte superior de la pantalla y no se mueva cuando se hace scroll 
+    <nav className="sticky top-0 z-50 bg-[#181818] shadow-lg lg:static">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 relative">
-          {/* Logo */}
+        <div className="flex justify-between items-center h-24 relative">
+          {/* Logo + Nombre */}
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              {/* Original: className="rounded-full mr-3 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16" */}
+            <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/image.png"
-                alt="#"
+                src="/logoleorojo.png"
+                alt="Logo"
                 width={48}
                 height={48}
-                className="rounded-full mr-3 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 border border-black/20 shadow"
+                className="rounded-full w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 scale-x-[-1]"
               />
+              <span className={`${montserrat.className} text-white text-xl md:text-2xl font-bold tracking-wide`}>
+                LUCA MORIS
+              </span>
+
             </Link>
           </div>
 
-          {/* Título centrado en móvil y ubicado normalmente en PC */}
-          <div className="flex-1 flex justify-center lg:justify-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-white text-center lg:text-left tracking-wide">
-              Lucas Moris
-            </h1>
-          </div>
 
           {/* Botón menú móvil - visible solo en móvil */}
           <div className="flex items-center lg:hidden">
