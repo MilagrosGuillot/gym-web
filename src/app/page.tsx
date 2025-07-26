@@ -11,39 +11,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Título Personal Trainer */}
-     
 
-      {/* Video de YouTube con controles clasicos */}
+      {/* Video con controles clasicos */}
       <section
         id="inicio"
-        className="flex flex-col items-center justify-center min-h-[60vh] py-12 px-4 md:px-8 lg:px-12 text-center relative overflow-hidden bg-black"
+        className="flex flex-col items-center justify-center min-h-[60vh] py-12 px-4 md:px-8 lg:px-12 text-center relative bg-black"
       >
-        {/* Video responsivo y más grande en móvil */}
-        <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center">
-          <div className="w-full h-full aspect-video max-w-full md:max-w-5xl mx-0 md:mx-auto">
-            <iframe
-              className="w-full h-full rounded-none md:rounded-xl shadow-2xl"
-              src="https://www.youtube.com/embed/nvCrar6IvBk?controls=1&rel=0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
+        {/* Contenedor para el video responsive */}
+        <div className="w-full max-w-5xl mx-auto">
+          <video
+            className="w-full h-[54vh] rounded-none md:rounded-xl shadow-2xl"
+            src="/videoluca.mp4"
+            controls
+            preload="metadata"
+          >
+            Tu navegador no soporta el elemento video.
+          </video>
         </div>
       </section>
 
 
+
       <section className="bg-black py-12 px-4 md:px-8 lg:px-12">
-  <div className="max-w-7xl mx-auto text-center">
-    <h1 className="text-2xl md:text-3xl lg:text-[50px] font-extrabold text-white mb-6">
-      En lugar de vivir por causa y efecto, vamos a <br />
-      <span className="text-red-600">causar un efecto</span>
-    </h1>
-  </div>
-</section>
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-2xl md:text-3xl lg:text-[50px] font-extrabold text-white mb-6">
+            En lugar de vivir por causa y efecto, vamos a <br />
+            <span className="text-red-600">causar un efecto</span>
+          </h1>
+        </div>
+      </section>
 
 
       {/* Botón debajo de la imagen */}
@@ -61,9 +57,9 @@ export default function Home() {
         </div>
       </section>
 */}
-      
-       {/* Sección Asesorias */}
-       <section id="asesorias" className="py-12 px-4 md:px-8 lg:px-12 bg-">
+
+      {/* Sección Asesorias */}
+      <section id="asesorias" className="py-12 px-4 md:px-8 lg:px-12 bg-">
         <Asesorias />
       </section>
 
@@ -100,8 +96,8 @@ export default function Home() {
 
       {/* Menú flotante */}
       <FloatingMenu />
-   
-     
+
+
     </div>
   );
 }
