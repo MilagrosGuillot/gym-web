@@ -5,7 +5,7 @@ export default function Asesorias() {
   return (
     <div className="w-full flex justify-center py-8 px-4 md:px-8 lg:px-12">
       <div className="w-full max-w-md md:max-w-xl lg:max-w-3xl bg-black border-2 border-red-700 rounded-2xl p-6 md:p-10 lg:p-12 flex flex-col items-center shadow-xl">
-      <h3 className="text-2xl md:text-4xl font-extrabold text-white mb-4 text-center italic lg:text-[var(--text-h3)]">
+      <h3 className="font-extrabold text-white mb-4 text-center italic text-3xl">
           ASESORÍAS
         </h3>
         <p className="text-white text-base md:text-lg text-center mb-6 lg:mb-8 lg:text-[var(--text-paragraph)]">

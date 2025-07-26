@@ -36,11 +36,9 @@ export default function Home() {
       </section>
 
 
-      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black">
+      <section className="bg-black py-12 px-4 md:px-8 lg:px-12">
   <div className="max-w-7xl mx-auto text-center">
-    <h1
-      className="text-3xl md:text-5xl font-extrabold text-white mb-6 lg:text-[var(--text-h1)]"
-    >
+    <h1 className="text-2xl md:text-3xl lg:text-[50px] font-extrabold text-white mb-6">
       En lugar de vivir por causa y efecto, vamos a <br />
       <span className="text-red-600">causar un efecto</span>
     </h1>

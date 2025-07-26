@@ -12,6 +12,8 @@ const montserrat = Montserrat({
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#inicio');
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -77,7 +79,9 @@ export default function Navbar() {
             <a href="#inicio" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Inicio</a>
             <a href="#cambios-fisicos" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Cambios Físicos</a>
             <a href="#testimonios" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Comentarios</a>
+            {/*
             <a href="#acerca" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Acerca de mi</a>
+              */}
             <a href="#asesorias" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Asesorias</a>
             <a href="#contacto" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Contacto</a>
           </div>
@@ -86,14 +90,27 @@ export default function Navbar() {
 
       {/* Menú visible solo en móvil */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-black/10">
-          {/* Original: className="text-gray-700 hover:text-gray-900 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200" */}
-          <a href="#inicio" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Inicio</a>
-          <a href="#cambios-fisicos" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Cambios Físicos</a>
-          <a href="#testimonios" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Comentarios</a>
-          <a href="#acerca" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Acerca de mi</a>
-          <a href="#asesorias" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Asesorias</a>
-          <a href="#contacto" className="text-black hover:text-red-600 block px-4 py-3 rounded-lg text-base font-bold border-2 border-gray-200 hover:border-red-400 hover:bg-red-100 transition-all duration-200" onClick={() => setIsMenuOpen(false)}>Contacto</a>
+        <div className="w-full bg-white shadow-md">
+          {[
+            { href: '#inicio', label: 'HOME' },
+            { href: '/asesorias', label: 'ASESORÍAS' },
+            { href: '#contacto', label: 'CONTACTO' },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => {
+                setActiveSection(item.href);
+                setIsMenuOpen(false);
+              }}
+              className={`block w-full px-6 py-4 text-sm font-semibold tracking-wide uppercase transition-colors duration-200 bg-[#f2f2f2] ${activeSection === item.href
+                  ? 'text-red-600'
+                  : 'text-black hover:text-red-600'
+                }`}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
