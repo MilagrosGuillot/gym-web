@@ -36,15 +36,17 @@ export default function Home() {
       </section>
 
 
-      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black ">
-        <div className="max-w-7xl mx-auto text-center">
-        <p className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
-        En lugar de vivir por causa y efecto, vamos a 
-          <br />
-          <span className="text-red-600">causar un efecto</span>
-    </p>
-        </div>
-      </section>
+      <section className="py-12 px-4 md:px-8 lg:px-12 bg-black">
+  <div className="max-w-7xl mx-auto text-center">
+    <h1
+      className="text-3xl md:text-5xl font-extrabold text-white mb-6 lg:text-[var(--text-h1)]"
+    >
+      En lugar de vivir por causa y efecto, vamos a <br />
+      <span className="text-red-600">causar un efecto</span>
+    </h1>
+  </div>
+</section>
+
 
       {/* Botón debajo de la imagen */}
       {/*

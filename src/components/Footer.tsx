@@ -15,7 +15,7 @@ export default function Footer() {
           </ul>
         </nav>
         {/* Nombre y eslogan */}
-        <h3 className="text-2xl md:text-3xl font-extrabold tracking-wide text-center">Lucas Moris</h3>
+        <h3 className="text-2xl md:text-3xl font-extrabold tracking-wide text-center">Luca Moris</h3>
         <p className="text-white text-base md:text-lg font-semibold text-center mb-2">&ldquo;Transforma tu vida, no solo tu cuerpo&rdquo;</p>
 
         {/* Redes sociales (sin acción) */}

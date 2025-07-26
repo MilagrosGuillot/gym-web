@@ -5,6 +5,12 @@
   --foreground: #ffffff;
   --primary: #ff0000;
   --accent: #ff0000;
+
+
+  --text-h1: 55px;
+  --text-h2: 35px;
+  --text-h3: 29px;
+  --text-paragraph: 18px;
 }
 
 @theme inline {
@@ -14,6 +20,12 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --text-h1: var(--text-h1);
+  --text-h2: var(--text-h2);
+  --text-h3: var(--text-h3);
+  --text-paragraph: var(--text-paragraph);
+  
 }
 
 @media (prefers-color-scheme: dark) {
