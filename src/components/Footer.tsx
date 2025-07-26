@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-4 text-center text-xs text-white">
-          &copy; {new Date().getFullYear()} Lucas Moriss. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} Luca Moris. Todos los derechos reservados.
         </div>
       </div>
     </footer>
