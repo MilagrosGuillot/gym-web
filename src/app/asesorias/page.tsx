@@ -1,10 +1,17 @@
 export default function AsesoriasPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black p-6 gap-10">
+      <h1
+        className="text-xl md:text-3xl font-bold italic mb-4"
+        style={{ paddingTop: '5%' }}
+      >
+        ASESORÍAS PERSONALIZADAS
+      </h1>
+
       <div className="flex flex-col gap-3 bg-red-900 border border-red-500 shadow-[0_0_0_1px_red] text-white rounded-lg shadow-lg max-w-3xl p-8 [&>p]:text-[15px] md:[&>p]:text-[24px]">
-        <h1 className="text-xl md:text-3xl font-bold italic mb-4">
+        <h2 className="text-xl md:text-3xl font-bold italic mb-4">
           ¿QUÉ SON LAS ASESORÍAS 1 A 1?
-        </h1>
+        </h2>
 
         <p className="mb-4">
           Si estás buscando llevar tu alimentación a otro nivel, las asesorías 1 a 1 son para vos.
@@ -20,7 +27,7 @@ export default function AsesoriasPage() {
         </p>
       </div>
 
-{/* ASESORÍA COMPLETA */}
+      {/* ASESORÍA COMPLETA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold italic mb-6">
           ASESORÍA COMPLETA<br />con seguimiento
@@ -47,7 +54,7 @@ export default function AsesoriasPage() {
         </div>
       </div>
 
-{/* ASESORÍA MEDIA */}
+      {/* ASESORÍA MEDIA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold italic mb-6">
           ASESORÍA MEDIA<br />con seguimiento
@@ -74,7 +81,7 @@ export default function AsesoriasPage() {
         </div>
       </div>
 
-{/* RUTINA PERSONALIZADA */}
+      {/* RUTINA PERSONALIZADA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold italic mb-6">
           RUTINA PERSONALIZADA<br />sin seguimiento
@@ -103,7 +110,7 @@ export default function AsesoriasPage() {
         </div>
       </div>
 
-{/* DIETA PERSONALIZADA */}
+      {/* DIETA PERSONALIZADA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold italic mb-6">
           DIETA PERSONALIZADA<br />sin seguimiento
