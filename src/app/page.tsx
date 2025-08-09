@@ -65,7 +65,7 @@ export default function Home() {
 
 
       {/* Sección Carrusel de Imágenes */}
-      <section id="carrusel" className="py-12 px-4 md:px-8 lg:px-12 bg-black">
+      <section id="cambios" className="py-12 px-4 md:px-8 lg:px-12 bg-black">
         <div className="w-full max-w-7xl mx-auto">
           <ImageCarousel
             images={[

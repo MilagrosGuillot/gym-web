@@ -76,14 +76,15 @@ export default function Navbar() {
           {/* Menú escritorio - visible solo en PC */}
           <div className="hidden lg:flex items-center space-x-6">
             {/* Original: className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-blue-50 hover:scale-105" */}
-            <a href="#inicio" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Inicio</a>
-            <a href="#cambios-fisicos" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Cambios Físicos</a>
-            <a href="#testimonios" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Comentarios</a>
+            <Link href="/" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Inicio</Link>
+            <Link href="#cambios" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Cambios Físicos</Link>
+            <Link href="#testimonios" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Comentarios</Link>
             {/*
             <a href="#acerca" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Acerca de mi</a>
               */}
-            <a href="#asesorias" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Asesorias</a>
-            <a href="#contacto" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Contacto</a>
+            <Link href="/asesorias" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Asesorias</Link>
+            <Link href= "/#contacto" className="text-white hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-red-100">Contacto</Link>
+
           </div>
         </div>
       </div>
@@ -92,11 +93,11 @@ export default function Navbar() {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
         <div className="w-full bg-white shadow-md">
           {[
-            { href: '#inicio', label: 'HOME' },
+            { href: '/', label: 'HOME' },
             { href: '/asesorias', label: 'ASESORÍAS' },
-            { href: '#contacto', label: 'CONTACTO' },
+            { href: '/#contacto', label: 'CONTACTO' },
           ].map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => {
@@ -109,7 +110,7 @@ export default function Navbar() {
                 }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
