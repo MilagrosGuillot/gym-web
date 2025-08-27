@@ -1,8 +1,8 @@
 export interface Testimonial {
   id: number;
   name: string;
-  image: string; // legacy, mantener para compatibilidad
-  images: string[]; // nuevo: puede ser una o dos imágenes
+  image: string; 
+  images: string[]; 
   results: string;
   comment: string;
 }

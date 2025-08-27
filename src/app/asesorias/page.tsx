@@ -34,7 +34,7 @@ export default function AsesoriasPage() {
         </h2>
         <p className="text-center text-sm md:text-base text-red-400 mb-4">
           Plan de Nutrición + Plan de Entrenamiento<br />
-          (+ Recetario Fitness de regalo)
+     
         </p>
         <ul className="list-none space-y-3 text-left text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-10">
           <li><span className="text-red-400 font-bold">01.</span> Plan nutricional personalizado + plan de entrenamiento personalizado.</li>
@@ -44,7 +44,6 @@ export default function AsesoriasPage() {
           <li><span className="text-red-400 font-bold">05.</span> Actualizaciones limitadas en caso de ser necesario (imprevistos, preferencias, etc.)</li>
           <li><span className="text-red-400 font-bold">06.</span> Soporte vía WhatsApp.</li>
           <li><span className="text-red-400 font-bold">07.</span> Revisión de ejecución de ejercicios mediante videos en caso de ser necesario.</li>
-          <li><span className="text-red-400 font-bold">08.</span> Recetario Fitness de regalo.</li>
         </ul>
 
         <div className="flex justify-center mt-6">
@@ -61,7 +60,7 @@ export default function AsesoriasPage() {
         </h2>
         <p className="text-center text-sm md:text-base text-red-400 mb-4">
           Plan de Nutrición <span className="italic">o</span> Plan de Entrenamiento<br />
-          (+ Recetario Fitness de regalo según elección)
+
         </p>
         <ul className="list-none space-y-3 text-left text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-10">
           <li><span className="text-red-400 font-bold">01.</span> Plan nutricional personalizado <span className="italic">o</span> plan de entrenamiento personalizado.</li>
@@ -71,7 +70,7 @@ export default function AsesoriasPage() {
           <li><span className="text-red-400 font-bold">05.</span> Actualizaciones ilimitadas en caso de ser necesario (imprevistos, preferencias, etc.)</li>
           <li><span className="text-red-400 font-bold">06.</span> Soporte vía WhatsApp.</li>
           <li><span className="text-red-400 font-bold">07.</span> Revisión de ejecución de ejercicios mediante videos (si se elige entrenamiento).</li>
-          <li><span className="text-red-400 font-bold">08.</span> Recetario Fitness de regalo (si se elige nutrición).</li>
+
         </ul>
 
         <div className="flex justify-center mt-6">
@@ -128,7 +127,7 @@ export default function AsesoriasPage() {
             <li>Chequeos.</li>
             <li>Actualizaciones del plan.</li>
             <li>Soporte vía WhatsApp.</li>
-            <li>Recetario Fitness.</li>
+
           </ul>
         </div>
 
