@@ -69,11 +69,10 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto">
           <ImageCarousel
             images={[
-              '/1.jpeg',
-              '/2.jpeg',
-              '/3.jpeg',
-              '/4.jpeg',
-              '/C1.jpg',
+              '/1.jpg',
+              '/2.jpg',
+              '/3.png',
+              '/4.png',
             ]}
           />
           {/* Texto debajo del carrusel */}

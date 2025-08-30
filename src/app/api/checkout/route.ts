@@ -3,7 +3,7 @@ import Stripe from "stripe";
 
 export async function POST(request: Request) {
   try {
-    const { priceId } = await request.json();
+    const { priceId, email } = await request.json();
 
     if (!priceId) {
       return NextResponse.json({ error: "priceId is required" }, { status: 400 });
@@ -15,6 +15,7 @@ export async function POST(request: Request) {
       mode: "payment",
       payment_method_types: ["card"],
       line_items: [{ price: priceId, quantity: 1 }],
+      customer_email: email,  // <--- Stripe enviará el recibo aquí
       success_url: `${process.env.NEXT_PUBLIC_DOMAIN}/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_DOMAIN}/asesorias`,
     });

@@ -26,7 +26,7 @@ export default function FloatingMenu() {
         <div className={`flex flex-col items-end space-y-4 mb-2 transition-all duration-300 z-50 pointer-events-none ${isFabOpen ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none translate-y-4'}`}>  
           {/* TikTok */}
           <a href="https://www.tiktok.com/@lucamoriss.fit" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="">
-          <span className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-red-500">
+          <span className="w-12 h-12 flex items-center justify-center rounded-full">
             <SiTiktok width={40} height={40} className="w-10 h-10" />
             </span>
           </a>
