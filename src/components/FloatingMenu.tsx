@@ -4,6 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { MdEmail } from "react-icons/md";
 import { SiTiktok } from "react-icons/si";
+
+
+
 export default function FloatingMenu() {
   // Nuevo botón flotante WhatsApp con despliegue de iconos
   const [isFabOpen, setIsFabOpen] = useState(false);

@@ -1,4 +1,50 @@
+"use client";
+import { useEffect, useState } from "react"
+import ButtonCheckout from '@/components/ButtonCheckout';
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+interface Price {
+  id: string;
+  nickname: string;
+  unit_amount: number;
+}
+
+interface PricesState {
+  completa: Price[];
+  media: Price[];
+}
+
 export default function AsesoriasPage() {
+
+  const [prices, setPrices] = useState<PricesState>({ completa: [], media: [] });
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchPrices = async () => {
+      try {
+        const resCompleta = await fetch("/api/prices?tipo=completa");
+        const preciosCompletos = await resCompleta.json();
+
+        const resMedia = await fetch("/api/prices?tipo=media");
+        const preciosMedios = await resMedia.json();
+
+        setPrices({
+          completa: preciosCompletos,
+          media: preciosMedios,
+        });
+
+        if (preciosCompletos.length > 0) setSelectedPrice(preciosCompletos[0].id);
+      } catch (error) {
+        console.error("Error al traer los precios:", error);
+      }
+    };
+
+    fetchPrices();
+  }, []);
+
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black p-6 gap-10">
       <h1
@@ -16,6 +62,9 @@ export default function AsesoriasPage() {
         <p className="mb-4">
           Si estás buscando llevar tu alimentación a otro nivel, las asesorías 1 a 1 son para vos.
         </p>
+        <p className="mb-4 font-semibold">
+          Cada asesoría tiene una duración de un mes, con opción de adquirirla a 4, 8 o 12 semanas según tus objetivos y necesidades.
+        </p>
         <p className="mb-4">
           Según la asesoría que elijas, tendrás un plan de nutrición y/o entrenamiento 100% personalizado, suplementación adaptada, información extra, chequeos, soporte directo y actualizaciones cuando lo necesites.
         </p>
@@ -27,6 +76,7 @@ export default function AsesoriasPage() {
         </p>
       </div>
 
+
       {/* ASESORÍA COMPLETA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold italic mb-6">
@@ -34,7 +84,7 @@ export default function AsesoriasPage() {
         </h2>
         <p className="text-center text-sm md:text-base text-red-400 mb-4">
           Plan de Nutrición + Plan de Entrenamiento<br />
-     
+
         </p>
         <ul className="list-none space-y-3 text-left text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-10">
           <li><span className="text-red-400 font-bold">01.</span> Plan nutricional personalizado + plan de entrenamiento personalizado.</li>
@@ -47,11 +97,15 @@ export default function AsesoriasPage() {
         </ul>
 
         <div className="flex justify-center mt-6">
-          <button className="bg-red-500 px-6 py-3 rounded-md italic font-semibold text-white hover:bg-black transition hover:border-red-500 hover:border-2">
+          <Link
+           href="/asesorias/product?tipo=completa"
+            className="bg-red-500 px-6 py-3 rounded-md italic font-semibold text-white hover:bg-black transition hover:border-red-500 hover:border-2 text-center"
+          >
             MÁS INFORMACIÓN
-          </button>
+          </Link>
         </div>
       </div>
+
 
       {/* ASESORÍA MEDIA */}
       <div className="max-w-3xl w-full border border-red-500 shadow-[0_0_0_1px_red] text-white p-8 space-y-6">
