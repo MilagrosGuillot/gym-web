@@ -1,10 +1,8 @@
-"use client";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import ButtonCheckout from "@/components/ButtonCheckout";
-import { Inter } from "next/font/google";
+'use client';
 
-const inter = Inter({ subsets: ["latin"] });
+import { useEffect, useState } from "react";
+import ButtonCheckout from "@/components/ButtonCheckout";
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -22,18 +20,21 @@ interface Price {
 }
 
 export default function Product() {
-  const searchParams = useSearchParams();
-  const tipo = searchParams.get("tipo");
-
+  const [tipo, setTipo] = useState<string | null>(null);
   const [prices, setPrices] = useState<Price[]>([]);
   const [selectedPrice, setSelectedPrice] = useState("");
 
   useEffect(() => {
-    if (!tipo) return;
+    // Obtener el parámetro "tipo" desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const t = params.get("tipo");
+    setTipo(t);
+
+    if (!t) return;
 
     const fetchPrices = async () => {
       try {
-        const res = await fetch(`/api/prices?tipo=${tipo}`);
+        const res = await fetch(`/api/prices?tipo=${t}`);
         const precios = await res.json();
         setPrices(precios);
         if (precios.length > 0) setSelectedPrice(precios[0].id);
@@ -43,7 +44,7 @@ export default function Product() {
     };
 
     fetchPrices();
-  }, [tipo]);
+  }, []);
 
   const precio1Mes = prices.find(
     p =>
@@ -52,17 +53,17 @@ export default function Product() {
   );
 
   return (
-    <div
-      className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-6 gap-10 text-center ${inter.className}`}
-    >
-   <h1 className="text-3xl md:text-4xl font-bold italic text-white pt-10 flex items-center justify-center gap-4">
-  <img
-    src="/leopard-claw.png"
-    alt="Logo garras"
-    className="w-16 h-16 object-contain drop-shadow-lg"
-  />
-  ASESORÍA {tipo?.toUpperCase()}
-</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black p-6 gap-10 text-center">
+      <h1 className="text-3xl md:text-4xl font-bold italic text-white pt-10 flex items-center justify-center gap-4">
+        <Image
+          src="/leopard-claw.png"
+          alt="Logo garras"
+          width={64}
+          height={64}
+          className="object-contain drop-shadow-lg"
+        />
+        ASESORÍA {tipo?.toUpperCase()}
+      </h1>
 
       {/* CARD */}
       <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full flex flex-col items-center gap-6 transition-all duration-300">

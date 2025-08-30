@@ -1,17 +1,6 @@
 "use client";
 import Link from "next/link";
 
-interface Price {
-  id: string;
-  nickname: string;
-  unit_amount: number;
-}
-
-interface PricesState {
-  completa: Price[];
-  media: Price[];
-}
-
 export default function AsesoriasPage() {
 
   return (
