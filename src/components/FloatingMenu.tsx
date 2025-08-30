@@ -46,9 +46,11 @@ export default function FloatingMenu() {
             if (!isFabOpen) {
               setIsFabOpen(true);
             } else {
-              'https://wa.me/5493516579114?text=' + encodeURIComponent('Hola, me interesa empezar. ¿Me contás cómo funciona?'),
+              window.open(
+                'https://wa.me/5493516579114?text=' +
+                  encodeURIComponent('Hola, me interesa empezar. ¿Me contás cómo funciona?'),
                 '_blank'
-
+              );
               setIsFabOpen(false);
             }
           }}
