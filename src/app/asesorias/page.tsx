@@ -215,8 +215,6 @@ export default function AsesoriasPage() {
                     <p className="text-green-400 font-medium">
                     ARS $  {p.valor.toLocaleString("es-AR")}
 </p>
-
-
                   </div>
                 ))}
               </div>
@@ -230,7 +228,7 @@ export default function AsesoriasPage() {
               className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-full transition"
             >
               <span>¡Quiero esta asesoría</span>
-              <img
+              <Image
                 src="/footprints.png"
                 alt="Huellas de leopardo"
                 className="w-4 h-4"
