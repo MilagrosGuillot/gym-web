@@ -1,7 +1,4 @@
 "use client";
-import { useEffect, useState } from "react"
-import ButtonCheckout from '@/components/ButtonCheckout';
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 interface Price {
@@ -16,34 +13,6 @@ interface PricesState {
 }
 
 export default function AsesoriasPage() {
-
-  const [prices, setPrices] = useState<PricesState>({ completa: [], media: [] });
-  const [selectedPrice, setSelectedPrice] = useState("");
-  const router = useRouter();
-
-  useEffect(() => {
-    const fetchPrices = async () => {
-      try {
-        const resCompleta = await fetch("/api/prices?tipo=completa");
-        const preciosCompletos = await resCompleta.json();
-
-        const resMedia = await fetch("/api/prices?tipo=media");
-        const preciosMedios = await resMedia.json();
-
-        setPrices({
-          completa: preciosCompletos,
-          media: preciosMedios,
-        });
-
-        if (preciosCompletos.length > 0) setSelectedPrice(preciosCompletos[0].id);
-      } catch (error) {
-        console.error("Error al traer los precios:", error);
-      }
-    };
-
-    fetchPrices();
-  }, []);
-
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black p-6 gap-10">
@@ -98,7 +67,7 @@ export default function AsesoriasPage() {
 
         <div className="flex justify-center mt-6">
           <Link
-           href="/asesorias/product?tipo=completa"
+            href="/asesorias/product?tipo=completa"
             className="bg-red-500 px-6 py-3 rounded-md italic font-semibold text-white hover:bg-black transition hover:border-red-500 hover:border-2 text-center"
           >
             MÁS INFORMACIÓN
@@ -191,8 +160,6 @@ export default function AsesoriasPage() {
           </button>
         </div>
       </div>
-
-
 
     </div>
   );
