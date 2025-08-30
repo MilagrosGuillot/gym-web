@@ -33,9 +33,9 @@ export default function AsesoriasPage() {
       ],
       noIncluye: [],
       precios: [
-        { plan: "1 mes", valor: 3000 },
-        { plan: "2 meses", valor: 8000 },
-        { plan: "3 meses", valor: 8000 }
+        { plan: "1 mes", valor: 30000 },
+        { plan: "2 meses", valor: 55000 },
+        { plan: "3 meses", valor: 80000 }
       ]
     },
     {
@@ -54,9 +54,9 @@ export default function AsesoriasPage() {
       ],
       noIncluye: [],
       precios: [
-        { plan: "1 mes", valor: 3000 },
-        { plan: "2 meses", valor: 8000 },
-        { plan: "3 meses", valor: 8000 }
+        { plan: "1 mes", valor: 22500 },
+        { plan: "2 meses", valor: 40000 },
+        { plan: "3 meses", valor: 65000 }
       ]
     },
     {
@@ -212,7 +212,11 @@ export default function AsesoriasPage() {
                 {asesoriaSeleccionada.precios.map((p, j) => (
                   <div key={j} className="border border-white/10 bg-white/10 p-4 rounded-xl shadow-sm">
                     <p className="font-semibold text-lg">{p.plan}</p>
-                    <p className="text-green-400 font-medium">ARS {p.valor.toLocaleString()}</p>
+                    <p className="text-green-400 font-medium">
+                    ARS $  {p.valor.toLocaleString("es-AR")}
+</p>
+
+
                   </div>
                 ))}
               </div>
