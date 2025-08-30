@@ -227,10 +227,12 @@ export default function AsesoriasPage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-full transition"
             >
-              <span>¡Quiero esta asesoría</span>
+              <span>Quiero esta asesoría</span>
               <Image
                 src="/footprints.png"
                 alt="Huellas de leopardo"
+                width={16}
+                height={16}            
                 className="w-4 h-4"
               />
             </a>

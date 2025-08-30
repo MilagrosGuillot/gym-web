@@ -77,8 +77,13 @@ export default function Home() {
           />
           {/* Texto debajo del carrusel */}
           <div className="mt-8 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">¡Inspírate con estos resultados!</h3>
-            <p className="text-white text-lg md:text-xl">Tú también puedes lograr tu mejor versión. ¡Comienza hoy!</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            Esto no es suerte. Es decisión.
+            </h3>
+            <p className="text-white text-lg md:text-xl">
+              Resultados reales. Progreso visible. Tu cambio empieza cuando decidís hacerlo.
+            </p>
+
           </div>
         </div>
       </section>
