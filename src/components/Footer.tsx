@@ -18,12 +18,13 @@ export default function Footer() {
         <h3 className="text-2xl md:text-3xl font-extrabold tracking-wide text-center">Luca Moris</h3>
         <p className="text-white text-base md:text-lg font-semibold text-center mb-2">&ldquo;Transforma tu vida, no solo tu cuerpo&rdquo;</p>
 
-        {/* Redes sociales (sin acción) */}
+        {/* Redes sociales */}
+
         <div className="flex items-center justify-center gap-6 mt-2">
-          {/* TikTok */}
-          <a href="https://www.tiktok.com/@lucamoriss.fit" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="flex flex-col items-center group focus:outline-none text-xs font-bold text-white group-hover:text-blue-200" style={{ textDecoration: 'none', textShadow: '0.25px 0.25px 0.5px rgba(0,0,0,0.15)' }}>
-            <Image src="/tik-tok.png" alt="TikTok" width={32} height={32} className="w-8 h-8 mb-1" />
-            TikTok
+          {/* Instagram */}
+          <a href="https://www.instagram.com/lucamoriss.fit" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex flex-col items-center group focus:outline-none text-xs font-bold text-white group-hover:text-blue-200" style={{ textDecoration: 'none', textShadow: '0.25px 0.25px 0.5px rgba(0,0,0,0.15)' }}>
+            <Image  src="/LogoInsta.png"  alt="Instagram" width={32} height={32} className="w-8 h-8 mb-1" />
+            Instagram
           </a>
           {/* WhatsApp */}
           <a
