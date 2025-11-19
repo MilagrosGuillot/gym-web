@@ -10,50 +10,50 @@ export interface Testimonial {
 export const testimonialsData: Testimonial[] = [
   {
     id: 1,
-    name: "María, 42 años",
+    name: "Alexis Rodriguez, 20 años",
     image: "/Perfil.png",
-    images: ["/C1.jpg", "/C2.jpg"], // ejemplo collage antes/después
-    results: "Mamá ocupada - Perdió 12kg en 6 meses",
-    comment: "Antes iba sola al gym y me perdía. Luca me enseñó las técnicas correctas y me ayudó con la alimentación. Ahora veo mi progreso semana a semana."
+    images: ["/C1.jpg", "/C2.jpg"],
+    results: "?",
+    comment: "Es la primera experiencia que tengo en un gym y la verdad me siento muy acompañado tanto de Luca como de mis compañeros. Me levanto todos los dias a las 7:00 am con ganas de venir y darlo todo. Estoy completamente agradecido."
   },
   {
     id: 2,
-    name: "Carlos, 35 años",
+    name: "Lautaro POSON?, 21 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "Ejecutivo - Ganó 8kg de músculo en 8 meses",
-    comment: "Me sorprendió lo mucho que sabe Luca sobre nutrición. Las rutinas personalizadas me permiten ver mi progreso real. Además, conocí gente copada en el gym."
+    results: "?",
+    comment: "Desde mi pespectiva, el tiempo no a ??? y mogni constantemente me recuerda que soy yo mismo el unico responsable de que ??? tiempo. "
   },
   {
     id: 3,
-    name: "Ana, 28 años",
+    name: "Patricio, 22 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "Principiante - Transformación completa en 5 meses",
-    comment: "Nunca había pisado un gym. Luca me enseñó todo desde cero y me corrigió las posturas. Ahora me siento segura entrenando."
+    results: "?",
+    comment: "La verdad que es la primera experiencia que tengo en el gym y me esta encantado, noto como mi cuerpo y energia aumento positivamente por la forma de hacer ejercicio y del coaching que se mantiene. Tambien me agrada el ambiente familiar que se maneja y el compañerismo."
   },
   {
     id: 4,
-    name: "Luis, 45 años",
+    name: "Ariel Bonugli, 29 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "Papá - Recuperó su forma física en 10 meses",
-    comment: "Iba solo al gym y no veía resultados. Con Luca todo cambió. Me guía con la alimentación y me corrige las técnicas."
+    results: "?",
+    comment: "Estuve buscando gimnasios que se adapten a mis comodidades y lo encontré. Mejoró mi autoestima y mi mentalidad. Grandes cambios y asesoramiento continuo en rutinas y alimentación para cumplir los objetivos que cada uno se plantea, con profesionalismo y un grupo humano muy cómodo y saludable, con mucho respeto y mucho amor. Mogni es un gimnasio que no sabía que existía, pero sí sabía que lo necesitaba."
   },
   {
     id: 5,
-    name: "Sofía, 31 años",
+    name: "Florencia Oviedo, 34 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "Deportista - Mejoró su rendimiento en 6 meses",
-    comment: "Ya hacía deporte pero quería optimizar mi entrenamiento. Luca me enseñó técnicas que nunca había visto y me dio rutinas específicas."
+    results: "?",
+    comment: "Hace un año comencé con el cumplimiento de una meta postergada por años: ocuparme de mi salud física. Previo a Mogni Gym, pasé por otras experiencias de las que obtuve resultados, pero sin tener la motivación de sostenerlo en el tiempo. Hace un año que siento que tengo el acompañamiento de un equipo, la atención y el profesionalismo que nunca había tenido, todo esto con el moño del capital humano de nuestros profes. Su amor y pasión trasciende lo meramente profesional, acompañando codo a codo para continuar renovando las expectativas y los objetivos. Estoy logrando resultados que jamás tuve, y es notorio lo reconfortante que es psicofísicamente."
   },
   {
     id: 6,
-    name: "Roberto, 38 años",
+    name: "Pablo Martinez, 37 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "Emprendedor - Recuperó su energía en 4 meses",
-    comment: "Trabajaba 12 horas por día y me sentía agotado. Luca me ayudó a organizar mi tiempo y ahora tengo energía para todo el día."
+    results: "?",
+    comment: "Casi un año de esta aventura, con altos y bajos pero siempre presentes. Encontramos un espacio no solo de entrenamiento, sino también un lugar más para disfrutar en pareja, ya que el ambiente que compartimos lo construimos nosotros, y es algo para envidiar, amigos, bromas, entrenamiento y disciplina."
   }
 ]; 

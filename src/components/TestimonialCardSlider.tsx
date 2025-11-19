@@ -1,16 +1,6 @@
-import { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
-import { testimonialsData } from '../data/testimonials';
-
-// Divide el comentario en dos partes: la primera frase y el resto
-function splitComment(comment: string) {
-  // Divide la primera frase (hasta el primer punto o exclamación/interrogación)
-  const match = comment.match(/(.+?[.!?])\s*(.*)/);
-  if (match) {
-    return [match[1], match[2]];
-  }
-  return [comment, ''];
-}
+import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
+import { testimonialsData } from "../data/testimonials"; 
 
 export default function TestimonialCardSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,8 +20,8 @@ export default function TestimonialCardSlider() {
       setCardsPerPage(visible > 0 ? visible : 1);
     };
     updateCardsPerPage();
-    window.addEventListener('resize', updateCardsPerPage);
-    return () => window.removeEventListener('resize', updateCardsPerPage);
+    window.addEventListener("resize", updateCardsPerPage);
+    return () => window.removeEventListener("resize", updateCardsPerPage);
   }, []);
 
   // Actualizar página actual según scroll
@@ -103,7 +93,7 @@ export default function TestimonialCardSlider() {
   }, []);
 
   // Función para avanzar o retroceder el slider con flechas
-  const scrollByCards = (direction: 'left' | 'right') => {
+  const scrollByCards = (direction: "left" | "right") => {
     const container = containerRef.current;
     if (!container) return;
     const card = container.querySelector('[role="card"]') as HTMLElement;
@@ -111,14 +101,17 @@ export default function TestimonialCardSlider() {
     const cardWidth = card.offsetWidth + 16; // gap-4 = 16px
     const scrollAmount = cardWidth * cardsPerPage;
     container.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
     });
     setTimeout(updateCurrentPage, 350); // Actualiza el dot después del scroll
   };
 
   // Calcular número de páginas
-  const numPages = Math.max(1, Math.ceil(testimonialsData.length / cardsPerPage));
+  const numPages = Math.max(
+    1,
+    Math.ceil(testimonialsData.length / cardsPerPage)
+  );
 
   return (
     <div id="testimonios" className="w-full bg-black py-8 md:py-16">
@@ -130,7 +123,7 @@ export default function TestimonialCardSlider() {
         <button
           type="button"
           aria-label="Anterior"
-          onClick={() => scrollByCards('left')}
+          onClick={() => scrollByCards("left")}
           className="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-red-600 text-white hover:bg-red-700 shadow transition-all"
           style={{ fontSize: 18 }}
         >
@@ -139,7 +132,7 @@ export default function TestimonialCardSlider() {
         <button
           type="button"
           aria-label="Siguiente"
-          onClick={() => scrollByCards('right')}
+          onClick={() => scrollByCards("right")}
           className="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-red-600 text-white hover:bg-red-700 shadow transition-all"
           style={{ fontSize: 18 }}
         >
@@ -148,10 +141,9 @@ export default function TestimonialCardSlider() {
         <div
           ref={containerRef}
           className="flex gap-4 md:gap-8 overflow-x-auto pb-4 snap-x scroll-smooth hide-scrollbar"
-          style={{ scrollBehavior: 'smooth' }}
+          style={{ scrollBehavior: "smooth" }}
         >
           {testimonialsData.map((testimonial) => {
-            const [main, rest] = splitComment(testimonial.comment);
             return (
               <div
                 key={testimonial.id}
@@ -161,9 +153,6 @@ export default function TestimonialCardSlider() {
               >
                 {/* Badge y foto centrados arriba */}
                 <div className="flex flex-col items-center gap-1 mb-2 md:mb-3">
-                  <span className="bg-red-100 text-red-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-0.5 md:py-1 rounded-full shadow border border-red-200">
-                    {testimonial.results}
-                  </span>
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -173,17 +162,17 @@ export default function TestimonialCardSlider() {
                   />
                 </div>
                 {/* Nombre */}
-                <h4 className="font-semibold text-sm md:text-base text-black mb-1 z-10">{testimonial.name}</h4>
+                <h4 className="font-semibold text-sm md:text-base text-black mb-1 z-10">
+                  {testimonial.name}
+                </h4>
                 {/* Frase destacada */}
-                <blockquote className="text-red-600 text-base md:text-lg font-bold italic mb-1 leading-snug z-10">
-                  “{main}”
+                <span className="bg-red-100 text-red-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-0.5 md:py-1 rounded-full shadow border border-red-200">
+                  {testimonial.results}
+                </span>
+
+                <blockquote className="text-gray-800 text-xs md:text-sm italic mb-2 leading-relaxed z-10">
+                  {testimonial.comment}
                 </blockquote>
-                {/* Resto del comentario */}
-                {rest && (
-                  <blockquote className="text-gray-800 text-xs md:text-sm italic mb-2 leading-relaxed z-10">
-                    {rest}
-                  </blockquote>
-                )}
               </div>
             );
           })}
@@ -194,13 +183,15 @@ export default function TestimonialCardSlider() {
             <div
               key={pageIdx}
               className={`w-3 h-3 md:w-4 md:h-4 rounded-full border-2 transition-all duration-300
-                ${pageIdx === currentPage
-                  ? 'bg-red-600 border-red-600 scale-110 shadow-lg'
-                  : 'bg-transparent border-red-500'}`}
+                ${
+                  pageIdx === currentPage
+                    ? "bg-red-600 border-red-600 scale-110 shadow-lg"
+                    : "bg-transparent border-red-500"
+                }`}
             />
           ))}
         </div>
       </div>
     </div>
   );
-} 
+}
