@@ -18,11 +18,11 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Lautaro POSON?, 21 años",
+    name: "Lautaro ?, 21 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
-    results: "?",
-    comment: "Desde mi pespectiva, el tiempo no a ??? y mogni constantemente me recuerda que soy yo mismo el unico responsable de que ??? tiempo. "
+    results: "Bajó 10 kilos y ganó masa muscular",
+    comment: "Gracias a Luca y su equipo logré cambiar mis hábitos y mi forma de ver el ejercicio. No solo mejoré físicamente, sino que también gané confianza y disciplina. El ambiente es increíble y siempre me siento motivado para dar lo mejor de mí."
   },
   {
     id: 3,
