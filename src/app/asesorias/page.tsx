@@ -206,7 +206,7 @@ export default function AsesoriasPage() {
 
 
       {modalOpen && asesoriaSeleccionada && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center overflow-y-auto py-10 z-50">
           <div className="bg-white/5 border border-white/10 text-white rounded-2xl max-w-sm w-full p-6 relative shadow-xl animate-fadeIn">
 
             {/* Botón de cierre */}
