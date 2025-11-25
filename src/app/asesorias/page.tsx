@@ -10,6 +10,7 @@ interface Asesoria {
   whatsapp: string;
   noIncluye: string[];
   precios?: { plan: string; valor: number }[];
+  preciosMultiples?: { titulo: string; lista: { plan: string; valor: number }[] }[];
 }
 
 export default function AsesoriasPage() {
@@ -17,6 +18,7 @@ export default function AsesoriasPage() {
   const [asesoriaSeleccionada, setAsesoriaSeleccionada] = useState<Asesoria | null>(null);
 
   const asesorias: Asesoria[] = [
+    
     {
       nombre: "ASESORÍA COMPLETA",
       descripcion: "Plan de Nutrición + Plan de Entrenamiento",
@@ -33,11 +35,12 @@ export default function AsesoriasPage() {
       ],
       noIncluye: [],
       precios: [
-        { plan: "1 mes", valor: 30000 },
-        { plan: "2 meses", valor: 55000 },
-        { plan: "3 meses", valor: 80000 }
+        { plan: "1 mes", valor: 42000 },
+        { plan: "2 meses", valor: 82000 },
+        { plan: "3 meses", valor: 124000 }
       ]
     },
+
     {
       nombre: "ASESORÍA MEDIA",
       descripcion: "Plan de Nutrición o Plan de Entrenamiento",
@@ -53,11 +56,24 @@ export default function AsesoriasPage() {
         "Revisión de ejecución de ejercicios mediante videos (si se elige entrenamiento)."
       ],
       noIncluye: [],
-      precios: [
-        { plan: "1 mes", valor: 22500 },
-        { plan: "2 meses", valor: 40000 },
-        { plan: "3 meses", valor: 65000 }
+      preciosMultiples: [
+    {
+      titulo: "Plan Nutricional",
+      lista: [
+        { plan: "1 mes", valor: 13500 },
+        { plan: "2 meses", valor: 25000 },
+        { plan: "3 meses", valor: 38500 }
       ]
+    },
+    {
+      titulo: "Plan de Entrenamiento",
+      lista: [
+        { plan: "1 mes", valor: 18000 },
+        { plan: "2 meses", valor: 34000 },
+        { plan: "3 meses", valor: 52000 }
+      ]
+    }
+  ]
     },
     {
       nombre: "RUTINA PERSONALIZADA",
@@ -75,9 +91,9 @@ export default function AsesoriasPage() {
         "Revisión de ejercicios mediante videos."
       ],
       precios: [
-        { plan: "1 mes", valor: 3000 },
-        { plan: "2 meses", valor: 8000 },
-        { plan: "3 meses", valor: 8000 }
+        { plan: "1 mes", valor: 16000 },
+        { plan: "2 meses", valor: 30000 },
+        { plan: "3 meses", valor: 48000 }
       ]
     },
     {
@@ -95,9 +111,9 @@ export default function AsesoriasPage() {
         "Soporte vía WhatsApp."
       ],
       precios: [
-        { plan: "1 mes", valor: 3000 },
-        { plan: "2 meses", valor: 8000 },
-        { plan: "3 meses", valor: 8000 }
+        { plan: "1 mes", valor: 12500 },
+        { plan: "2 meses", valor: 23000 },
+        { plan: "3 meses", valor: 35500 }
       ]
     }
   ];
@@ -219,6 +235,29 @@ export default function AsesoriasPage() {
                 ))}
               </div>
             )}
+
+{/* Precios múltiples (nutrición y entrenamiento) */}
+{asesoriaSeleccionada.preciosMultiples && (
+  <div className="space-y-5 mb-6">
+    {asesoriaSeleccionada.preciosMultiples.map((categoria, i) => (
+      <div key={i}>
+        <h3 className="text-center text-red-300 text-lg font-bold mb-2">
+          {categoria.titulo}
+        </h3>
+
+        {categoria.lista.map((p, j) => (
+          <div key={j} className="border border-white/10 bg-white/10 p-4 rounded-xl shadow-sm mb-3">
+            <p className="font-semibold text-lg">{p.plan}</p>
+            <p className="text-green-400 font-medium">
+              ARS $ {p.valor.toLocaleString("es-AR")}
+            </p>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+)}
+
 
             {/* Botón WhatsApp */}
             <a

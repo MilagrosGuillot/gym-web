@@ -18,7 +18,7 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Lautaro ?, 21 años",
+    name: "Lautaro Pajon, 21 años",
     image: "/Perfil.png",
     images: ["/Perfil.png"],
     results: "Bajó 10 kilos y ganó masa muscular",
