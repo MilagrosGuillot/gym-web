@@ -165,10 +165,13 @@ export default function TestimonialCardSlider() {
                 <h4 className="font-semibold text-sm md:text-base text-black mb-1 z-10">
                   {testimonial.name}
                 </h4>
+             
                 {/* Frase destacada */}
+                   {/*
                 <span className="bg-red-100 text-red-700 text-[10px] md:text-xs font-bold px-2 md:px-3 py-0.5 md:py-1 rounded-full shadow border border-red-200">
                   {testimonial.results}
                 </span>
+*/}
 
                 <blockquote className="text-gray-800 text-xs md:text-sm italic mb-2 leading-relaxed z-10">
                   {testimonial.comment}
